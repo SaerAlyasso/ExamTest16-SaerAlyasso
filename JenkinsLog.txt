@@ -1,0 +1,799 @@
+Started by user anonymous
+Building on master in workspace C:\Program Files (x86)\Jenkins\workspace\UKLocation
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/SaerAlyasso/ExamTest16-SaerAlyasso # timeout=10
+Fetching upstream changes from https://github.com/SaerAlyasso/ExamTest16-SaerAlyasso
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/SaerAlyasso/ExamTest16-SaerAlyasso +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 8897feed00687b133ff0d525220d37cc81da7c09 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 8897feed00687b133ff0d525220d37cc81da7c09
+ > C:\Program Files\Git\bin\git.exe rev-list 8897feed00687b133ff0d525220d37cc81da7c09 # timeout=10
+Parsing POMs
+Established TCP socket on 57476
+[UKLocation] $ "C:\Program Files\Java\jdk1.8.0_51\/bin/java" -cp "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-agent-1.8.1.jar;C:\Program Files\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;C:\Program Files\apache-maven-3.3.9/conf/logging" jenkins.maven3.agent.Maven33Main "C:\Program Files\apache-maven-3.3.9\" "C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.7.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-interceptor-1.8.1.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.8.1.jar" 57476
+<===[JENKINS REMOTING CAPACITY]===>???channel started
+Executing Maven:  -B -f C:\Program Files (x86)\Jenkins\workspace\UKLocation\pom.xml com.smartbear.soapui:soapui-maven-plugin:test -DprojectFile=UKLocation-soapui-project.xml
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building soapUI project 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- soapui-maven-plugin:5.0.0:test (default-cli) @ soapui-project ---
+SoapUI 5.0.0 Maven2 TestCase Runner
+21:30:03,383 WARN  [SoapUI] Missing folder [C:\Program Files (x86)\Jenkins\workspace\UKLocation\ext] for external libraries
+21:30:03,383 INFO  [DefaultSoapUICore] Creating new settings at [C:\WINDOWS\system32\config\systemprofile\soapui-settings.xml]
+21:30:04,319 INFO  [WsdlProject] Loaded project from [file:/C:/Program%20Files%20(x86)/Jenkins/workspace/UKLocation/UKLocation-soapui-project.xml]
+21:30:04,879 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [UKLocation]
+21:30:04,879 INFO  [SoapUITestCaseRunner] Running Project [UKLocation], runType = SEQUENTIAL
+21:30:04,894 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [UKLocation-TestCase]
+21:30:04,910 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByCounty]
+21:30:05,254 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+21:30:05,254 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+21:30:05,846 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+21:30:05,862 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+21:30:06,191 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+21:30:06,191 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+21:30:06,191 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+21:30:06,191 INFO  [SoapUITestCaseRunner] running step [PostCode]
+21:30:06,191 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByPostCode]
+21:30:06,207 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+21:30:06,222 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+21:30:06,222 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+21:30:06,798 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+21:30:06,798 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+21:30:06,798 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+21:30:06,798 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+21:30:06,798 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+21:30:06,814 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByTown_ProjectLevel]
+21:30:07,361 INFO  [log] <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetUKLocationByPostCodeResponse xmlns="http://www.webserviceX.NET">
+         <GetUKLocationByPostCodeResult><![CDATA[<NewDataSet>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Deddington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Drayton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Epwell</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Wigginton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Winderton</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Wroxton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Alkerton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hempton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hook Norton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Horley</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hornton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Lower Brailes</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Milcombe</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Milton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Balscote</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Barford St John</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Barford St Michael</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Bloxham</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Bodicote</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Broughton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Shutford</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Sibford Ferris</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Sibford Gower</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>South Newington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Swalcliffe</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Tadmarton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>North Newington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Ratley</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Shenington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Upper Brailes</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+</NewDataSet>]]></GetUKLocationByPostCodeResult>
+      </GetUKLocationByPostCodeResponse>
+   </soap:Body>
+</soap:Envelope>
+21:30:07,408 INFO  [log] <NewDataSet>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Deddington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Drayton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Epwell</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Wigginton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Winderton</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Wroxton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Alkerton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hempton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hook Norton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Horley</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hornton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Lower Brailes</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Milcombe</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Milton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Balscote</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Barford St John</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Barford St Michael</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Bloxham</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Bodicote</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Broughton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Shutford</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Sibford Ferris</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Sibford Gower</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>South Newington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Swalcliffe</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Tadmarton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>North Newington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Ratley</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Shenington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Upper Brailes</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+</NewDataSet>
+21:30:07,423 INFO  [log] CliftonOxfordshireOX15DeddingtonOxfordshireOX15DraytonOxfordshireOX15EpwellOxfordshireOX15WiggintonOxfordshireOX15WindertonWarwickshireOX15WroxtonOxfordshireOX15AlkertonOxfordshireOX15HemptonOxfordshireOX15Hook NortonOxfordshireOX15HorleyOxfordshireOX15HorntonOxfordshireOX15Lower BrailesWarwickshireOX15MilcombeOxfordshireOX15MiltonOxfordshireOX15BalscoteOxfordshireOX15Barford St JohnOxfordshireOX15Barford St MichaelOxfordshireOX15BloxhamOxfordshireOX15BodicoteOxfordshireOX15BroughtonOxfordshireOX15ShutfordOxfordshireOX15Sibford FerrisOxfordshireOX15Sibford GowerOxfordshireOX15South NewingtonOxfordshireOX15SwalcliffeOxfordshireOX15TadmartonOxfordshireOX15North NewingtonOxfordshireOX15RatleyWarwickshireOX15SheningtonOxfordshireOX15Upper BrailesWarwickshireOX15
+21:30:07,423 INFO  [log] Clifton
+21:30:07,439 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByTown]
+21:30:07,439 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+21:30:07,454 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+21:30:07,454 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+21:30:07,954 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+21:30:07,954 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+21:30:07,954 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+21:30:07,954 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+21:30:07,954 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+21:30:07,954 INFO  [SoapUITestCaseRunner] running step [ValidateUKAdress_GlobalLevel]
+21:30:08,095 INFO  [log] <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetUKLocationByTownResponse xmlns="http://www.webserviceX.NET">
+         <GetUKLocationByTownResult><![CDATA[<NewDataSet>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Bedfordshire</County>
+    <PostCode>SG17</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Bristol</County>
+    <PostCode>BS8</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Cumbria</County>
+    <PostCode>CA10</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Derbyshire</County>
+    <PostCode>DE6</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Hereford and Worcester</County>
+    <PostCode>WR8</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Lancashire</County>
+    <PostCode>PR4</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Northumberland</County>
+    <PostCode>NE61</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Nottinghamshire</County>
+    <PostCode>NG11</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Stirling</County>
+    <PostCode>FK20</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton Campville</Town>
+    <County>Staffordshire</County>
+    <PostCode>B79</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton Hampden</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX14</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton Reynes</Town>
+    <County>Milton Keynes</County>
+    <PostCode>MK46</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton upon Dunsmore</Town>
+    <County>Warwickshire</County>
+    <PostCode>CV23</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton upon Teme</Town>
+    <County>Hereford and Worcester</County>
+    <PostCode>WR6</PostCode>
+  </Table>
+  <Table>
+    <Town>Cliftonville</Town>
+    <County>Kent</County>
+    <PostCode>CT9</PostCode>
+  </Table>
+  <Table>
+    <Town>Great Clifton</Town>
+    <County>Cumbria</County>
+    <PostCode>CA14</PostCode>
+  </Table>
+  <Table>
+    <Town>Little Clifton</Town>
+    <County>Cumbria</County>
+    <PostCode>CA14</PostCode>
+  </Table>
+  <Table>
+    <Town>South Clifton</Town>
+    <County>Nottinghamshire</County>
+    <PostCode>NG23</PostCode>
+  </Table>
+  <Table>
+    <Town>North Clifton</Town>
+    <County>Nottinghamshire</County>
+    <PostCode>NG23</PostCode>
+  </Table>
+</NewDataSet>]]></GetUKLocationByTownResult>
+      </GetUKLocationByTownResponse>
+   </soap:Body>
+</soap:Envelope>
+21:30:08,095 INFO  [log] <NewDataSet>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Bedfordshire</County>
+    <PostCode>SG17</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Bristol</County>
+    <PostCode>BS8</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Cumbria</County>
+    <PostCode>CA10</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Derbyshire</County>
+    <PostCode>DE6</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Hereford and Worcester</County>
+    <PostCode>WR8</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Lancashire</County>
+    <PostCode>PR4</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Northumberland</County>
+    <PostCode>NE61</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Nottinghamshire</County>
+    <PostCode>NG11</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Stirling</County>
+    <PostCode>FK20</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton Campville</Town>
+    <County>Staffordshire</County>
+    <PostCode>B79</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton Hampden</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX14</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton Reynes</Town>
+    <County>Milton Keynes</County>
+    <PostCode>MK46</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton upon Dunsmore</Town>
+    <County>Warwickshire</County>
+    <PostCode>CV23</PostCode>
+  </Table>
+  <Table>
+    <Town>Clifton upon Teme</Town>
+    <County>Hereford and Worcester</County>
+    <PostCode>WR6</PostCode>
+  </Table>
+  <Table>
+    <Town>Cliftonville</Town>
+    <County>Kent</County>
+    <PostCode>CT9</PostCode>
+  </Table>
+  <Table>
+    <Town>Great Clifton</Town>
+    <County>Cumbria</County>
+    <PostCode>CA14</PostCode>
+  </Table>
+  <Table>
+    <Town>Little Clifton</Town>
+    <County>Cumbria</County>
+    <PostCode>CA14</PostCode>
+  </Table>
+  <Table>
+    <Town>South Clifton</Town>
+    <County>Nottinghamshire</County>
+    <PostCode>NG23</PostCode>
+  </Table>
+  <Table>
+    <Town>North Clifton</Town>
+    <County>Nottinghamshire</County>
+    <PostCode>NG23</PostCode>
+  </Table>
+</NewDataSet>
+21:30:08,111 INFO  [log] CliftonBedfordshireSG17CliftonBristolBS8CliftonCumbriaCA10CliftonDerbyshireDE6CliftonHereford and WorcesterWR8CliftonLancashirePR4CliftonNorthumberlandNE61CliftonNottinghamshireNG11CliftonOxfordshireOX15CliftonStirlingFK20Clifton CampvilleStaffordshireB79Clifton HampdenOxfordshireOX14Clifton ReynesMilton KeynesMK46Clifton upon DunsmoreWarwickshireCV23Clifton upon TemeHereford and WorcesterWR6CliftonvilleKentCT9Great CliftonCumbriaCA14Little CliftonCumbriaCA14South CliftonNottinghamshireNG23North CliftonNottinghamshireNG23
+21:30:08,111 INFO  [log] Clifton
+21:30:08,111 INFO  [log] Bedfordshire
+21:30:08,111 INFO  [log] SG17
+21:30:08,111 INFO  [SoapUITestCaseRunner] running step [ValidateUKAddress]
+21:30:08,126 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+21:30:08,142 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+21:30:08,142 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+21:30:08,548 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+21:30:08,548 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+21:30:08,564 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+21:30:08,564 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+21:30:08,564 INFO  [SoapUITestCaseRunner] Assertion [Contains 1] has status VALID
+21:30:08,564 INFO  [SoapUITestCaseRunner] Assertion [SG17] has status VALID
+21:30:08,564 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+21:30:08,564 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [UKLocation-TestCase], time taken: 3637ms, status: FINISHED
+21:30:08,564 INFO  [SoapUITestCaseRunner] Project [UKLocation] finished with status [FINISHED] in 3685ms
+[JENKINS] Recording test results
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.360 s
+[INFO] Finished at: 2017-05-23T21:30:08+02:00
+[INFO] Final Memory: 25M/196M
+[INFO] ------------------------------------------------------------------------
+[JENKINS] Archiving C:\Program Files (x86)\Jenkins\workspace\UKLocation\pom.xml to com.scania.cbm.test/soapui-project/0.0.1/soapui-project-0.0.1.pom
+channel stopped
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of TimeSheetApp
+Finished: SUCCESS
+
+Started by upstream project "UKLocation" build number 7
+originally caused by:
+ Started by user anonymous
+Building on master in workspace C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/SaerAlyasso/ExamTest16-SaerAlyasso # timeout=10
+Fetching upstream changes from https://github.com/SaerAlyasso/ExamTest16-SaerAlyasso
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/SaerAlyasso/ExamTest16-SaerAlyasso +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 8897feed00687b133ff0d525220d37cc81da7c09 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 8897feed00687b133ff0d525220d37cc81da7c09
+ > C:\Program Files\Git\bin\git.exe rev-list 8897feed00687b133ff0d525220d37cc81da7c09 # timeout=10
+Parsing POMs
+Established TCP socket on 57481
+[TimeSheetApp] $ "C:\Program Files\Java\jdk1.8.0_51\/bin/java" -cp "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-agent-1.8.1.jar;C:\Program Files\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;C:\Program Files\apache-maven-3.3.9/conf/logging" jenkins.maven3.agent.Maven33Main "C:\Program Files\apache-maven-3.3.9\" "C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.7.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-interceptor-1.8.1.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.8.1.jar" 57481
+<===[JENKINS REMOTING CAPACITY]===>???channel started
+Executing Maven:  -B -f C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp\pom.xml com.smartbear.soapui:soapui-maven-plugin:test -DprojectFile=TimeSheetApp-soapui-project.xml
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building soapUI project 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- soapui-maven-plugin:5.0.0:test (default-cli) @ soapui-project ---
+SoapUI 5.0.0 Maven2 TestCase Runner
+21:30:23,530 WARN  [SoapUI] Missing folder [C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp\ext] for external libraries
+21:30:23,530 INFO  [DefaultSoapUICore] Creating new settings at [C:\WINDOWS\system32\config\systemprofile\soapui-settings.xml]
+21:30:24,468 INFO  [WsdlProject] Loaded project from [file:/C:/Program%20Files%20(x86)/Jenkins/workspace/TimeSheetApp/TimeSheetApp-soapui-project.xml]
+21:30:25,077 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [TimeSheetApp]
+21:30:25,093 INFO  [SoapUITestCaseRunner] Running Project [TimeSheetApp], runType = SEQUENTIAL
+21:30:25,108 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [TimeSheetApp-TestCase]
+21:30:25,108 INFO  [SoapUITestCaseRunner] running step [Static-EmpData-POST]
+21:30:25,468 INFO  [log] Email: saer3@gmail.com
+21:30:25,468 INFO  [log] FirstName: Deveee
+21:30:25,468 INFO  [log] Gender: Deveee
+21:30:25,468 INFO  [log] LastName: Deveee
+21:30:25,468 INFO  [log] Role: Developer
+21:30:25,483 INFO  [SoapUITestCaseRunner] running step [Post-NewEmployee]
+21:30:25,897 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+21:30:25,897 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /employees/create HTTP/1.1
+21:30:26,116 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 204 
+21:30:26,132 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+21:30:26,147 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+21:30:26,147 INFO  [SoapUITestCaseRunner] running step [Get-AllEmployee]
+21:30:26,163 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+21:30:26,179 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+21:30:26,179 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: GET /employees/all HTTP/1.1
+21:30:26,241 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 
+21:30:26,241 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+21:30:26,382 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+21:30:26,382 INFO  [SoapUITestCaseRunner] Assertion [Contains 1] has status VALID
+21:30:26,382 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+21:30:26,382 INFO  [SoapUITestCaseRunner] running step [Dynamic-EmpData-DELETE]
+21:30:26,668 INFO  [SoapUITestCaseRunner] running step [Delete-Employee]
+21:30:26,668 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+21:30:26,684 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+21:30:26,684 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: DELETE /employees/delete HTTP/1.1
+21:30:26,730 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 400 
+21:30:26,730 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+21:30:26,746 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status FAILED
+21:30:26,746 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response status code:400 is not in acceptable list of status codes
+21:30:26,746 ERROR [SoapUITestCaseRunner] Delete-Employee failed, exporting to [C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp\TimeSheetAppTestSuite-TimeSheetAppTestCase-DeleteEmployee-0-FAILED.txt]
+21:30:26,746 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [TimeSheetApp-TestCase], time taken: 1392ms, status: FAILED
+21:30:26,746 INFO  [SoapUITestCaseRunner] Project [TimeSheetApp] finished with status [FAILED] in 1653ms
+[ERROR] java.lang.Exception: Valid HTTP Status Codes in [Delete-Employee] failed;
+[Response status code:400 is not in acceptable list of status codes]
+Status: FAILED
+Time Taken: 59
+Size: 342
+Timestamp: Tue May 23 21:30:26 CEST 2017
+TestStep: Delete-Employee
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://shielded-harbor-21142.herokuapp.com
+Method: DELETE
+StatusCode: 400
+URL: https://shielded-harbor-21142.herokuapp.com/employees/delete
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [shielded-harbor-21142.herokuapp.com]
+Accept-Encoding: [gzip,deflate]
+
+DELETE https://shielded-harbor-21142.herokuapp.com/employees/delete HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: shielded-harbor-21142.herokuapp.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+---------------- Response --------------------------
+Transfer-Encoding: [chunked]
+Server: [Cowboy]
+Connection: [keep-alive]
+#status#: [HTTP/1.1 400 ]
+X-Application-Context: [application:11374]
+Date: [Tue, 23 May 2017 19:30:28 GMT]
+Content-Type: [application/json;charset=UTF-8]
+Via: [1.1 vegur]
+
+{"timestamp":1495567828772,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Required request body is missing: public void com.ms2003.timesheet.web.service.EmployeeController.deleteEmployee(com.ms2003.timesheet.business.dto.EmployeeDTO)","path":"/employees/delete"}
+
+[JENKINS] Recording test results
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.368 s
+[INFO] Finished at: 2017-05-23T21:30:27+02:00
+[INFO] Final Memory: 28M/273M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.smartbear.soapui:soapui-maven-plugin:5.0.0:test (default-cli) on project soapui-project: SoapUI Test(s) failed: SoapUI Test(s) failed:
+[ERROR] Valid HTTP Status Codes in [Delete-Employee] failed;
+[ERROR] [Response status code:400 is not in acceptable list of status codes]
+[ERROR] Status: FAILED
+[ERROR] Time Taken: 59
+[ERROR] Size: 342
+[ERROR] Timestamp: Tue May 23 21:30:26 CEST 2017
+[ERROR] TestStep: Delete-Employee
+[ERROR] 
+[JENKINS] Archiving C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp\pom.xml to com.scania.cbm.test/soapui-project/0.0.1/soapui-project-0.0.1.pom
+[ERROR] ----------------- Messages ------------------------------
+[ERROR] [Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[ERROR] 
+[ERROR] ----------------- Properties ------------------------------
+[ERROR] HTTP Version: HTTP/1.1
+[ERROR] Endpoint: https://shielded-harbor-21142.herokuapp.com
+[ERROR] Method: DELETE
+[ERROR] StatusCode: 400
+[ERROR] URL: https://shielded-harbor-21142.herokuapp.com/employees/delete
+[ERROR] 
+[ERROR] ---------------- Request ---------------------------
+[ERROR] Connection: [Keep-Alive]
+[ERROR] User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+[ERROR] Host: [shielded-harbor-21142.herokuapp.com]
+[ERROR] Accept-Encoding: [gzip,deflate]
+[ERROR] 
+[ERROR] DELETE https://shielded-harbor-21142.herokuapp.com/employees/delete HTTP/1.1
+[ERROR] Accept-Encoding: gzip,deflate
+[ERROR] Host: shielded-harbor-21142.herokuapp.com
+[ERROR] Connection: Keep-Alive
+[ERROR] User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+[ERROR] 
+[ERROR] 
+[ERROR] ---------------- Response --------------------------
+[ERROR] Transfer-Encoding: [chunked]
+[ERROR] Server: [Cowboy]
+[ERROR] Connection: [keep-alive]
+[ERROR] #status#: [HTTP/1.1 400 ]
+[ERROR] X-Application-Context: [application:11374]
+[ERROR] Date: [Tue, 23 May 2017 19:30:28 GMT]
+[ERROR] Content-Type: [application/json;charset=UTF-8]
+[ERROR] Via: [1.1 vegur]
+[ERROR] 
+[ERROR] {"timestamp":1495567828772,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Required request body is missing: public void com.ms2003.timesheet.web.service.EmployeeController.deleteEmployee(com.ms2003.timesheet.business.dto.EmployeeDTO)","path":"/employees/delete"}
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+channel stopped
+Finished: FAILURE
